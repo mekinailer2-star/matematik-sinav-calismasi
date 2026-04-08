@@ -8,18 +8,10 @@
     <title>Matematik Sinav Calismasi</title>
     <link rel="manifest" href="manifest.json">
     <link rel="apple-touch-icon" href="icons/icon-192.svg">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="lib/katex.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>
-      window.MathJax = {
-        tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
-        startup: { pageReady: () => MathJax.startup.defaultPageReady() }
-      };
-    </script>
+    <script defer src="lib/katex.min.js"></script>
+    <script defer src="lib/auto-render.min.js"></script>
 </head>
 <body>
     <div id="app">
