@@ -94,9 +94,13 @@ function renderQuestion() {
   document.getElementById('btnPrev').disabled = state.currentQuestion === 0;
   document.getElementById('btnNext').disabled = state.currentQuestion === questions.length - 1;
 
-  if (window.MathJax && MathJax.typesetPromise) {
-    MathJax.typesetPromise([card]).catch(function(err) {
-      console.log('MathJax typeset error:', err);
+  if (window.renderMathInElement) {
+    renderMathInElement(card, {
+      delimiters: [
+        { left: '\\[', right: '\\]', display: true },
+        { left: '\\(', right: '\\)', display: false }
+      ],
+      throwOnError: false
     });
   }
 }
