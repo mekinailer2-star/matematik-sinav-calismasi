@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="12. Sinif Matematik 2. Donem 1. Yazili Sinav Calisma Rehberi">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>Matematik Sinav Calismasi</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="icons/icon-192.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>
+      window.MathJax = {
+        tex: { inlineMath: [['\\(', '\\)']], displayMath: [['\\[', '\\]']] },
+        startup: { pageReady: () => MathJax.startup.defaultPageReady() }
+      };
+    </script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="header-content">
+                <div class="logo-area">
+                    <span class="logo-icon">&#8721;</span>
+                    <div>
+                        <h1>Matematik Sinav Calismasi</h1>
+                        <p class="subtitle">12. Sinif | 2. Donem | 1. Yazili</p>
+                    </div>
+                </div>
+                <div class="progress-badge" id="progressBadge">0/8</div>
+            </div>
+        </header>
+
+        <main id="mainContent">
+            <section id="homeView" class="view active">
+                <div class="hero-card">
+                    <h2>Sinava Hazir misin?</h2>
+                    <p>8 sorunun detayli cozumlerini incele, pratik yap ve sinavdan 100 al!</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progressBar" style="width: 0%"></div>
+                    </div>
+                    <p class="progress-text" id="progressText">0 / 8 soru cozuldu</p>
+                </div>
+
+                <div class="topics-grid">
+                    <div class="topic-badge">Sureklilik</div>
+                    <div class="topic-badge">Turev Kavrami</div>
+                    <div class="topic-badge">Turevlenebilirlik</div>
+                    <div class="topic-badge">Turev Kurallari</div>
+                    <div class="topic-badge">Artan/Azalan</div>
+                    <div class="topic-badge">Maks/Min</div>
+                </div>
+
+                <div class="question-list" id="questionList"></div>
+            </section>
+
+            <section id="questionView" class="view">
+                <div class="question-nav-top">
+                    <button class="btn-back" id="btnBack">
+                        <span class="arrow-left"></span> Sorular
+                    </button>
+                    <div class="question-counter" id="questionCounter">1/8</div>
+                </div>
+                <div class="question-card" id="questionCard"></div>
+                <div class="question-nav-bottom">
+                    <button class="btn-nav" id="btnPrev" disabled>Onceki</button>
+                    <button class="btn-check" id="btnCheck">Cozumu Gor</button>
+                    <button class="btn-nav" id="btnNext">Sonraki</button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="app.js"></script>
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js')
+            .then(reg => console.log('SW registered'))
+            .catch(err => console.log('SW registration failed', err));
+        });
+      }
+    </script>
+</body>
+</html>
