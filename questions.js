@@ -65,7 +65,7 @@ const questions = [
     id: 3,
     topic: "Turevlenebilirlik",
     title: "Grafikten Turev Analizi",
-    question: `\\(f: [-5, 5] \\to \\mathbb{R}\\) tanimi \\(f(x)\\) fonksiyonunun grafigine gore, \\((-5, 5)\\) acik araliginda kac farkli teget degeri icin turevi kesinlikle yoktur?`,
+    question: `\\(f: [-5, 5] \\to \\mathbb{R}\\) tanimi \\(f(x)\\) fonksiyonunun grafigine gore, \\((-5, 5)\\) acik araliginda kac farkli teget degeri icin turevi kesinlikle yoktur?<br><br><img src="icons/graph-soru3.svg" alt="f(x) fonksiyonunun grafigi" style="width:100%;max-width:400px;border-radius:8px;margin:12px 0;">`,
     steps: [
       {
         title: "Adim 1: Turev Olmayan Noktalar",
@@ -76,7 +76,8 @@ const questions = [
       },
       {
         title: "Adim 2: Grafigi Inceleyelim",
-        content: `Grafige baktigimizda:<br>
+        content: `<img src="icons/graph-soru3.svg" alt="Grafik analizi" style="width:100%;max-width:400px;border-radius:8px;margin:12px 0;"><br>
+        Grafige baktigimizda:<br>
         <strong>x = -4:</strong> Acik daire var, fonksiyon bu noktada sureksiz &rarr; turev yok<br>
         <strong>x = 0:</strong> Keskin kose noktasi var &rarr; turev yok<br>
         <strong>x = 3:</strong> Acik daire var, fonksiyon bu noktada sureksiz &rarr; turev yok`
