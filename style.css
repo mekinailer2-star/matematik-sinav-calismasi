@@ -213,6 +213,19 @@ body {
     font-weight: 500;
 }
 
+.card-graph {
+    text-align: center;
+    margin-bottom: 16px;
+    padding: 12px;
+    background: #f7fafc;
+    border-radius: 10px;
+}
+
+.card-graph svg {
+    display: block;
+    margin: 0 auto;
+}
+
 .card-question {
     background: #f7fafc;
     border-left: 4px solid #667eea;
