@@ -72,6 +72,7 @@ function renderQuestion() {
                 '<span class="card-topic">' + q.topic + '</span>' +
             '</div>' +
         '</div>' +
+        (q.graph ? '<div class="card-graph">' + window[q.graph] + '</div>' : '') +
         '<div class="card-question">' + q.question + '</div>' +
         '<div class="card-solution' + ((state.solutionVisible || isCompleted) ? ' visible' : '') + '">' +
             stepsHtml +
