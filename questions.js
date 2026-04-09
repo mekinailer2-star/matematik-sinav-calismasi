@@ -53,6 +53,7 @@ var questions = [
         id: 3,
         topic: "Turevlenebilirlik",
         title: "Grafikten Turev Analizi",
+        graph: "graphSoru3",
         question: "\\(f: [-5, 5] \\to \\mathbb{R}\\) tanimi \\(f(x)\\) fonksiyonunun grafigine gore, \\((-5, 5)\\) acik araliginda kac farkli noktada turevi kesinlikle yoktur?",
         steps: [
             {
@@ -153,6 +154,7 @@ var questions = [
         id: 7,
         topic: "Maksimum / Minimum",
         title: "Dikdortgenin Maksimum Alani",
+        graph: "graphSoru7",
         question: "\\(y = -3x^2 + 9\\) parabolunun altinda, x ekseninin ustunde yer alan ABCD dikdortgeninin alani maksimum kac birim kare olur?",
         steps: [
             {
@@ -178,6 +180,7 @@ var questions = [
         id: 8,
         topic: "Maksimum / Minimum",
         title: "Ucgenin Maksimum Alani",
+        graph: "graphSoru8",
         question: "\\(y = 6x - x^2\\) parabolu uzerinde A noktasi, O(0,0) ve B(6,0) noktalari ile OBA ucgeni olusturuluyor. Bu ucgenin alani en buyuk oldugu A noktasinin apsisi kactir?",
         steps: [
             {
